@@ -1,5 +1,7 @@
 # Pingling
 
+<img src="https://github.com/easai/Pingling/blob/main/IMG_2767.jpeg" width="300" alt="Pingling" />
+
 Pingling is a compact ESP32‑C3 network monitor that displays real‑time reachability and local time. 
 
 It retrieves accurate time through NTP, applies timezone rules with `tzset()`, and performs periodic checks against a configured host or URL. The OLED display shows the current date, time, timezone, target address, and UP or DOWN status.
