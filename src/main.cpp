@@ -21,12 +21,28 @@ const unsigned long interval = 60000; // 1 minute
 
 bool isUp(const char* url) {
     HTTPClient http;
-    http.setTimeout(5000);
-    http.begin(url);
+
+    http.setTimeout(5000);  // 5s timeout
+    if (!http.begin(url)) {
+        return false;
+    }
+
     int code = http.GET();
+
     http.end();
-    return (code > 0 && code < 500);
+
+    if (code <= 0) {
+        // code == 0 or negative means:
+        // - timeout
+        // - DNS failure
+        // - connection refused
+        // - no HTTP response
+        return false;
+    }
+
+    return (code < 500);
 }
+
 
 void updateStatus() {
     setenv("TZ", "EST5EDT,M3.2.0/2,M11.1.0/2", 1);
