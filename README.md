@@ -1,6 +1,6 @@
 # Pingling
 
-<img src="https://github.com/easai/Pingling/blob/main/IMG_2767.jpeg" width="300" alt="Pingling" />
+<img src="https://github.com/easai/Pingling/blob/main/IMG_2814.jpeg" width="300" alt="Pingling" />
 
 Pingling is a compact ESP32‑C3 network monitor that displays real‑time reachability and local time. 
 
@@ -15,6 +15,8 @@ It retrieves accurate time through NTP, applies timezone rules with `tzset()`, a
 • Continuous status updates at a fixed interval  
 
 ## Hardware
+
+<img src="https://github.com/easai/Pingling/blob/main/IMG_2811.jpeg" width="300" alt="Pingling" />
 
 • ESP32‑C3 Super Mini  
 • SSD1306 OLED (128x64)  
